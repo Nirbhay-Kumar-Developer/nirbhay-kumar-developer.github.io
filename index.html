@@ -3,132 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirbhay Kumar - Repositories & Projects</title>
+    <meta name="description" content="Nirbhay Kumar - Portfolio showcasing repositories, projects, and open-source contributions">
+    <title>Nirbhay Kumar - Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="logo">NK Developer</div>
+            <div class="logo">
+                <span class="logo-icon">💻</span> NK Developer
+            </div>
             <ul class="nav-links">
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#tools">Tools</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#tools">Skills</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <h1>Nirbhay Kumar</h1>
-            <p class="subtitle">Developer | Open Source Contributor | Android & Systems Developer</p>
-            <p class="description">Building efficient, lightweight tools and educational applications</p>
+            <div class="hero-content">
+                <h1>Nirbhay Kumar</h1>
+                <p class="subtitle">Full-Stack Developer | Open Source Contributor</p>
+                <p class="description">Building efficient, lightweight tools and educational applications for Android, Termux, and Linux</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="https://github.com/Nirbhay-Kumar-Developer" target="_blank" class="btn btn-secondary">GitHub Profile</a>
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="container">
+        <!-- Stats Section -->
+        <section id="stats" class="stats-section">
+            <h2>At a Glance</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Active Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Languages Used</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Open Source</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2M+</div>
+                    <div class="stat-label">Lines of Code</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
         <section id="projects" class="projects-section">
             <h2>Featured Projects</h2>
             
-            <div class="projects-grid">
-                <!-- Android & Educational Apps -->
-                <div class="project-category">
-                    <h3>📱 Android & Educational Apps</h3>
-                    <div class="projects-list">
-                        <div class="project-card">
-                            <h4>Heurily</h4>
-                            <p class="tech-stack">Java • Android</p>
-                            <p>An all-in-one educational Android app featuring a robust formula database, custom test generator, interactive math quizzes, multi-profile support, and built-in utility tools.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/Nirbhay-Kumar-Developer/Heurily" target="_blank">View on GitHub</a>
-                                <a href="https://github.com/Nirbhay-Kumar-Developer/Heurily-Releases" target="_blank">Releases</a>
+            <!-- Android & Educational Apps -->
+            <div class="project-category">
+                <h3>📱 Android & Educational Applications</h3>
+                <div class="projects-list">
+                    <div class="project-card featured">
+                        <div class="project-badge">Featured</div>
+                        <h4>Heurily</h4>
+                        <p class="tech-stack">Java • Android • Educational</p>
+                        <p>An all-in-one educational Android app featuring a robust formula database, custom test generator, interactive math quizzes, multi-profile support, and built-in utility tools. Perfect for students preparing for exams.</p>
+                        <div class="project-stats">
+                            <span class="stat">100% Java</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Nirbhay-Kumar-Developer/Heurily" target="_blank" class="project-link">📌 Repository</a>
+                            <a href="https://github.com/Nirbhay-Kumar-Developer/Heurily-Releases" target="_blank" class="project-link secondary">📦 Releases</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Build Tools & Systems -->
+            <div class="project-category">
+                <h3>⚙️ Build Tools & Systems</h3>
+                <div class="projects-list">
+                    <div class="project-card">
+                        <h4>mkapk</h4>
+                        <p class="tech-stack">C++ • Java • Kotlin • Multi-language Build System</p>
+                        <p>Efficient and lightweight Android build tool designed specifically for Termux. Supports Java, Kotlin, C++, and C. Additional languages supported through plugins. Includes code obfuscation and optimization for release builds.</p>
+                        <div class="project-stats">
+                            <span class="stat">88.1% C++</span>
+                            <span class="stat">6.3% Java</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Nirbhay-Kumar-Developer/mkapk" target="_blank" class="project-link">📌 Repository</a>
+                            <a href="https://github.com/Nirbhay-Kumar-Developer/mkapk-template" target="_blank" class="project-link secondary">📋 Template</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h4>TOS</h4>
+                        <p class="tech-stack">C++ • Shell • Termux • System Management</p>
+                        <p>A lightweight pre-configured terminal environment and project management system for Termux. Streamlines development workflow with built-in configurations, utilities, and system optimization.</p>
+                        <div class="project-stats">
+                            <span class="stat">80.3% C++</span>
+                            <span class="stat">14.6% Shell</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Nirbhay-Kumar-Developer/TOS" target="_blank" class="project-link">📌 Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Command-Line Tools -->
+            <div class="project-category">
+                <h3>🛠️ Command-Line Utilities</h3>
+                <div class="projects-list">
+                    <div class="project-card">
+                        <h4>Worklog</h4>
+                        <p class="tech-stack">C++ • CLI • Productivity Tool</p>
+                        <p>A command-line tracker for tracking achievements, mistakes, and learnings of the day. Helps maintain a personal development journal with easy logging and retrieval. Perfect for daily standup meetings.</p>
+                        <div class="project-stats">
+                            <span class="stat">95.6% C++</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Nirbhay-Kumar-Developer/Worklog" target="_blank" class="project-link">📌 Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile & Web Projects -->
+            <div class="project-category">
+                <h3>🌐 Web & Profile Projects</h3>
+                <div class="projects-list">
+                    <div class="project-card">
+                        <h4>Developer Profile</h4>
+                        <p class="tech-stack">JavaScript • Web • Portfolio</p>
+                        <p>Interactive web-based developer profile showcasing work, skills, and contact information. Built with modern web technologies for optimal performance and user experience.</p>
+                        <div class="project-stats">
+                            <span class="stat">99.9% JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Nirbhay-Kumar-Developer/nirbhay-kumar-developer-profile" target="_blank" class="project-link">📌 Repository</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h4>Documentation Website</h4>
+                        <p class="tech-stack">HTML • CSS • JavaScript • This Site</p>
+                        <p>Central hub for all repositories, gists, and projects. Clean, responsive design with easy navigation and project discovery. Fully accessible and optimized for search engines.</p>
+                        <div class="project-stats">
+                            <span class="stat">You are here! 👋</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Nirbhay-Kumar-Developer/nirbhay-kumar-developer.github.io" target="_blank" class="project-link">📌 Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Technology Section -->
+        <section id="tools" class="tools-section">
+            <h2>Technology & Skills</h2>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h4>🔤 Programming Languages</h4>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-name">C++</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Java</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Kotlin</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Shell/Bash</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Build Tools & Systems -->
-                <div class="project-category">
-                    <h3>⚙️ Build Tools & Systems</h3>
-                    <div class="projects-list">
-                        <div class="project-card">
-                            <h4>mkapk</h4>
-                            <p class="tech-stack">C++ • Java • Kotlin • Shell</p>
-                            <p>Efficient and lightweight Android build tool designed specifically for Termux. Supports Java, Kotlin, C++ and C. Additional languages supported through plugins (experimental). Includes code obfuscation and optimization for release builds.</p>
-                            <a href="https://github.com/Nirbhay-Kumar-Developer/mkapk" target="_blank" class="project-link">View on GitHub</a>
+                <div class="tech-category">
+                    <h4>🎯 Specializations</h4>
+                    <div class="specialization-grid">
+                        <div class="specialization-item">
+                            <span class="spec-icon">📱</span>
+                            <span>Android Development</span>
                         </div>
-                        <div class="project-card">
-                            <h4>TOS</h4>
-                            <p class="tech-stack">C++ • Shell • Makefile</p>
-                            <p>A lightweight pre-configured terminal environment and project management system for Termux. Streamlines development workflow with built-in configurations and utilities.</p>
-                            <a href="https://github.com/Nirbhay-Kumar-Developer/TOS" target="_blank" class="project-link">View on GitHub</a>
+                        <div class="specialization-item">
+                            <span class="spec-icon">🔧</span>
+                            <span>Build Systems</span>
+                        </div>
+                        <div class="specialization-item">
+                            <span class="spec-icon">💻</span>
+                            <span>System Programming</span>
+                        </div>
+                        <div class="specialization-item">
+                            <span class="spec-icon">📦</span>
+                            <span>CLI Tools</span>
+                        </div>
+                        <div class="specialization-item">
+                            <span class="spec-icon">🚀</span>
+                            <span>Performance Optimization</span>
+                        </div>
+                        <div class="specialization-item">
+                            <span class="spec-icon">🎓</span>
+                            <span>Educational Software</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Command-Line Tools -->
-                <div class="project-category">
-                    <h3>🛠️ Command-Line Tools</h3>
-                    <div class="projects-list">
-                        <div class="project-card">
-                            <h4>Worklog</h4>
-                            <p class="tech-stack">C++ • Makefile • Shell</p>
-                            <p>A command-line tracker for tracking achievements, mistakes, and learnings of the day. Helps maintain a personal development journal with easy logging and retrieval.</p>
-                            <a href="https://github.com/Nirbhay-Kumar-Developer/Worklog" target="_blank" class="project-link">View on GitHub</a>
-                        </div>
+                <div class="tech-category">
+                    <h4>🖥️ Platforms & Tools</h4>
+                    <div class="platform-grid">
+                        <div class="platform-item">Android</div>
+                        <div class="platform-item">Termux</div>
+                        <div class="platform-item">Linux</div>
+                        <div class="platform-item">Git</div>
+                        <div class="platform-item">CMake</div>
+                        <div class="platform-item">Gradle</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="tools" class="tools-section">
-            <h2>Technology Stack</h2>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <h4>Languages</h4>
-                    <ul>
-                        <li>C++</li>
-                        <li>Java</li>
-                        <li>Kotlin</li>
-                        <li>JavaScript</li>
-                        <li>Shell</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li>Android</li>
-                        <li>Termux</li>
-                        <li>Linux</li>
-                        <li>Cross-platform</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h4>Specializations</h4>
-                    <ul>
-                        <li>Build Tools</li>
-                        <li>System Utilities</li>
-                        <li>Educational Apps</li>
-                        <li>Code Optimization</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
+        <!-- About Section -->
         <section id="about" class="about-section">
-            <h2>About This Site</h2>
-            <p>This documentation website serves as a central hub for all my repositories, gists, and projects. Each project showcases my work in various domains including Android development, system-level programming, and developer tools.</p>
-            <p>All projects are open-source and available on <a href="https://github.com/Nirbhay-Kumar-Developer" target="_blank">GitHub</a>.</p>
+            <div class="about-content">
+                <h2>About This Portfolio</h2>
+                <p>Welcome to my development portfolio! This site serves as a comprehensive hub for all my open-source projects, tools, and contributions to the developer community.</p>
+                
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <h5>🚀 Mission</h5>
+                        <p>Create efficient, lightweight, and user-friendly tools that empower developers and students to build better software.</p>
+                    </div>
+                    <div class="highlight">
+                        <h5>💡 Focus Areas</h5>
+                        <p>Android development, system-level programming, build automation, and educational software for underserved platforms like Termux.</p>
+                    </div>
+                    <div class="highlight">
+                        <h5>🌍 Community</h5>
+                        <p>All projects are open-source and available on GitHub. Contributions, feedback, and collaborations are always welcome!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <p>Interested in collaborating or have questions about my work?</p>
+                <div class="contact-links">
+                    <a href="https://github.com/Nirbhay-Kumar-Developer" target="_blank" class="contact-link">
+                        <span>GitHub</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="mailto:dev.nirbhaykumar@gmail.com" class="contact-link">
+                        <span>Email</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Nirbhay Kumar. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/Nirbhay-Kumar-Developer" target="_blank">GitHub</a>
+            <div class="footer-content">
+                <p>&copy; 2026 Nirbhay Kumar. All projects are open-source and available on GitHub.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Nirbhay-Kumar-Developer" target="_blank">GitHub</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
