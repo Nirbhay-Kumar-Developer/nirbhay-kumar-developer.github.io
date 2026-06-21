@@ -1,0 +1,186 @@
+/* Technical Markdown Rendering and Documentation Typography System */
+.docs-layout-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr 240px;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.docs-sidebar-nav {
+    position: sticky;
+    top: 100px;
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.docs-toc-header {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.docs-sidebar-links {
+    list-style: none;
+}
+
+.docs-sidebar-item {
+    margin-bottom: 0.35rem;
+}
+
+.docs-sidebar-link {
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+}
+
+.docs-sidebar-link:hover, .docs-sidebar-item.active-item .docs-sidebar-link {
+    background: var(--bg-active);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.markdown-body-render {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Structural Engine Elements */
+.markdown-body-render h1 { font-size: 2.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-top: 0; }
+.markdown-body-render h2 { font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.4rem; margin-top: 2.5rem; }
+.markdown-body-render h3 { font-size: 1.4rem; margin-top: 2rem; }
+
+.markdown-body-render p {
+    color: var(--text-main);
+    opacity: 0.9;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.markdown-body-render ul, .markdown-body-render ol {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.markdown-body-render li {
+    margin-bottom: 0.5rem;
+}
+
+/* Code Highlighting Blocks and Dynamic Operations */
+.markdown-body-render code {
+    font-family: var(--font-mono);
+    background: var(--bg-active);
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.markdown-code-block-wrapper {
+    position: relative;
+    margin: 1.75rem 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+}
+
+.markdown-code-header {
+    background: var(--bg-surface);
+    padding: 0.5rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.markdown-code-lang {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.markdown-code-copy-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.markdown-code-copy-btn:hover {
+    color: var(--text-main);
+}
+
+.markdown-body-render pre {
+    background: #0b0f19;
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin: 0;
+}
+
+.markdown-body-render pre code {
+    background: transparent;
+    padding: 0;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.markdown-body-render blockquote {
+    border-left: 4px solid var(--primary);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 1.5rem 0;
+    background: var(--bg-active);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.markdown-body-render blockquote p {
+    margin-bottom: 0;
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+/* Responsive Custom Tables Layout Matrix */
+.markdown-body-render table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.markdown-body-render th, .markdown-body-render td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.markdown-body-render th {
+    background: var(--bg-active);
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+@media(max-width: 1024px) {
+    .docs-layout-grid { grid-template-columns: 1fr; }
+    .docs-sidebar-nav { display: none; }
+    .markdown-body-render { padding: 2rem; }
+}

@@ -1,281 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Developer Dashboard - Track all projects and statistics">
-    <title>Dashboard - Nirbhay Kumar</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Workspace Analytics - Technical Performance Dashboard</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <span class="logo-icon">💻</span> NK Developer
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="#repositories">Repositories</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+
+    <nav class="navbar-fixed" role="navigation" aria-label="Main Portfolio Navigation">
+        <div class="container navbar-inner">
+            <a href="index.html" class="nav-brand" data-link="home">💻 NK Architect</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-link="home">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link active" data-link="dashboard">Workspace Analytics</a></li>
+                <li><a href="docs.html" class="nav-link" data-link="docs">Developer Docs</a></li>
             </ul>
-            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+            <div class="nav-actions">
+                <button class="btn-icon-only" id="palette-trigger-btn"><span>⌘</span></button>
+                <button class="btn-icon-only" id="global-theme-toggle"><span>🌙</span></button>
+                <a href="https://github.com/Nirbhay-Kumar-Developer" class="btn-core btn-primary-glow">Source Git</a>
+            </div>
         </div>
     </nav>
 
-    <header class="page-header">
-        <div class="container">
-            <h1>📊 Developer Dashboard</h1>
-            <p>Comprehensive overview of all projects, statistics, and contributions</p>
+    <main class="container section-wrapper">
+        <div class="section-header" style="text-align: left; margin-bottom: 3rem;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Workspace Performance Analytics</h1>
+            [span_48](start_span)<p>Real-time technical tracking telemetry aggregated straight from active version control repositories[span_48](end_span).</p>
         </div>
-    </header>
 
-    <main class="container">
-        <!-- Quick Stats -->
-        <section class="dashboard-section">
-            <h2>Quick Statistics</h2>
-            <div class="stats-grid-large">
-                <div class="stat-card-large">
-                    <div class="stat-icon">📦</div>
-                    <div class="stat-content">
-                        <div class="stat-number">8</div>
-                        <div class="stat-label">Active Repositories</div>
-                    </div>
-                </div>
-                <div class="stat-card-large">
-                    <div class="stat-icon">👁️</div>
-                    <div class="stat-content">
-                        <div class="stat-number">5</div>
-                        <div class="stat-label">Total Watchers</div>
-                    </div>
-                </div>
-                <div class="stat-card-large">
-                    <div class="stat-icon">⭐</div>
-                    <div class="stat-content">
-                        <div class="stat-number">4</div>
-                        <div class="stat-label">Stars</div>
-                    </div>
-                </div>
-                <div class="stat-card-large">
-                    <div class="stat-icon">🔤</div>
-                    <div class="stat-content">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Languages</div>
-                    </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+            <div class="card-container" style="padding: 1.5rem; flex-direction: row; align-items: center; gap: 1.5rem;">
+                <div style="font-size: 2rem;">📦</div>
+                <div>
+                    <div style="font-size: 1.75rem; font-weight: 800; color: var(--primary);" id="stat-total-repos">...</div>
+                    <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 700;">ACTIVE REPOSITORIES</div>
                 </div>
             </div>
-        </section>
-
-        <!-- Repository Overview -->
-        <section id="repositories" class="dashboard-section">
-            <h2>Repository Overview</h2>
-            <div class="repo-overview-grid">
-                <!-- mkapk -->
-                <div class="repo-card-dashboard">
-                    <div class="repo-header">
-                        <h3>mkapk</h3>
-                        <span class="repo-badge">Active</span>
-                    </div>
-                    <p class="repo-description">Efficient Android build tool for Termux</p>
-                    <div class="repo-meta">
-                        <span class="meta-item">⭐ 3</span>
-                        <span class="meta-item">👁️ 3</span>
-                        <span class="meta-item">C++ • Java • Kotlin</span>
-                    </div>
-                    <div class="repo-topics">
-                        <span class="topic">Android</span>
-                        <span class="topic">Build System</span>
-                        <span class="topic">Termux</span>
-                    </div>
-                    <div class="repo-links">
-                        <a href="wikis/mkapk.html" class="btn-small">📖 Wiki</a>
-                        <a href="https://github.com/Nirbhay-Kumar-Developer/mkapk" class="btn-small" target="_blank">🔗 GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Heurily -->
-                <div class="repo-card-dashboard featured">
-                    <div class="repo-header">
-                        <h3>Heurily</h3>
-                        <span class="repo-badge featured">Featured</span>
-                    </div>
-                    <p class="repo-description">Educational Android app with quizzes</p>
-                    <div class="repo-meta">
-                        <span class="meta-item">⭐ 0</span>
-                        <span class="meta-item">👁️ 0</span>
-                        <span class="meta-item">Java</span>
-                    </div>
-                    <div class="repo-topics">
-                        <span class="topic">Android</span>
-                        <span class="topic">Education</span>
-                        <span class="topic">App</span>
-                    </div>
-                    <div class="repo-links">
-                        <a href="wikis/heurily.html" class="btn-small">📖 Wiki</a>
-                        <a href="https://github.com/Nirbhay-Kumar-Developer/Heurily" class="btn-small" target="_blank">🔗 GitHub</a>
-                    </div>
-                </div>
-
-                <!-- TOS -->
-                <div class="repo-card-dashboard">
-                    <div class="repo-header">
-                        <h3>TOS</h3>
-                        <span class="repo-badge">Active</span>
-                    </div>
-                    <p class="repo-description">Terminal environment for Termux</p>
-                    <div class="repo-meta">
-                        <span class="meta-item">⭐ 0</span>
-                        <span class="meta-item">👁️ 0</span>
-                        <span class="meta-item">C++ • Shell</span>
-                    </div>
-                    <div class="repo-topics">
-                        <span class="topic">Termux</span>
-                        <span class="topic">CLI</span>
-                        <span class="topic">System</span>
-                    </div>
-                    <div class="repo-links">
-                        <a href="wikis/tos.html" class="btn-small">📖 Wiki</a>
-                        <a href="https://github.com/Nirbhay-Kumar-Developer/TOS" class="btn-small" target="_blank">🔗 GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Worklog -->
-                <div class="repo-card-dashboard">
-                    <div class="repo-header">
-                        <h3>Worklog</h3>
-                        <span class="repo-badge">Active</span>
-                    </div>
-                    <p class="repo-description">Daily tracking tool for achievements</p>
-                    <div class="repo-meta">
-                        <span class="meta-item">⭐ 0</span>
-                        <span class="meta-item">👁️ 0</span>
-                        <span class="meta-item">C++</span>
-                    </div>
-                    <div class="repo-topics">
-                        <span class="topic">CLI</span>
-                        <span class="topic">Productivity</span>
-                        <span class="topic">Tool</span>
-                    </div>
-                    <div class="repo-links">
-                        <a href="wikis/worklog.html" class="btn-small">📖 Wiki</a>
-                        <a href="https://github.com/Nirbhay-Kumar-Developer/Worklog" class="btn-small" target="_blank">🔗 GitHub</a>
-                    </div>
-                </div>
-
-                <!-- mkapk-template -->
-                <div class="repo-card-dashboard">
-                    <div class="repo-header">
-                        <h3>mkapk-template</h3>
-                        <span class="repo-badge template">Template</span>
-                    </div>
-                    <p class="repo-description">Template for mkapk projects</p>
-                    <div class="repo-meta">
-                        <span class="meta-item">⭐ 0</span>
-                        <span class="meta-item">👁️ 0</span>
-                        <span class="meta-item">Java • Kotlin • C++</span>
-                    </div>
-                    <div class="repo-topics">
-                        <span class="topic">Template</span>
-                        <span class="topic">mkapk</span>
-                        <span class="topic">Android</span>
-                    </div>
-                    <div class="repo-links">
-                        <a href="wikis/mkapk-template.html" class="btn-small">📖 Wiki</a>
-                        <a href="https://github.com/Nirbhay-Kumar-Developer/mkapk-template" class="btn-small" target="_blank">🔗 GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Developer Profile -->
-                <div class="repo-card-dashboard">
-                    <div class="repo-header">
-                        <h3>Developer Profile</h3>
-                        <span class="repo-badge">Active</span>
-                    </div>
-                    <p class="repo-description">Interactive web-based profile</p>
-                    <div class="repo-meta">
-                        <span class="meta-item">⭐ 0</span>
-                        <span class="meta-item">👁️ 0</span>
-                        <span class="meta-item">JavaScript</span>
-                    </div>
-                    <div class="repo-topics">
-                        <span class="topic">Web</span>
-                        <span class="topic">Portfolio</span>
-                        <span class="topic">JavaScript</span>
-                    </div>
-                    <div class="repo-links">
-                        <a href="wikis/developer-profile.html" class="btn-small">📖 Wiki</a>
-                        <a href="https://github.com/Nirbhay-Kumar-Developer/nirbhay-kumar-developer-profile" class="btn-small" target="_blank">🔗 GitHub</a>
-                    </div>
+            <div class="card-container" style="padding: 1.5rem; flex-direction: row; align-items: center; gap: 1.5rem;">
+                <div style="font-size: 2rem;">⭐</div>
+                <div>
+                    <div style="font-size: 1.75rem; font-weight: 800; color: var(--secondary);" id="stat-accumulated-stars">...</div>
+                    <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 700;">ACCUMULATED STARS</div>
                 </div>
             </div>
-        </section>
-
-        <!-- Language Distribution -->
-        <section class="dashboard-section">
-            <h2>Language Distribution</h2>
-            <div class="language-chart">
-                <div class="language-bar">
-                    <div class="language-item">
-                        <span class="language-name">C++</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 65%"></div>
-                        </div>
-                        <span class="language-percent">65%</span>
-                    </div>
-                </div>
-                <div class="language-bar">
-                    <div class="language-item">
-                        <span class="language-name">Java</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 20%"></div>
-                        </div>
-                        <span class="language-percent">20%</span>
-                    </div>
-                </div>
-                <div class="language-bar">
-                    <div class="language-item">
-                        <span class="language-name">JavaScript</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 8%"></div>
-                        </div>
-                        <span class="language-percent">8%</span>
-                    </div>
-                </div>
-                <div class="language-bar">
-                    <div class="language-item">
-                        <span class="language-name">Kotlin</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 5%"></div>
-                        </div>
-                        <span class="language-percent">5%</span>
-                    </div>
-                </div>
-                <div class="language-bar">
-                    <div class="language-item">
-                        <span class="language-name">Shell</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 2%"></div>
-                        </div>
-                        <span class="language-percent">2%</span>
-                    </div>
+            <div class="card-container" style="padding: 1.5rem; flex-direction: row; align-items: center; gap: 1.5rem;">
+                <div style="font-size: 2rem;">⚙️</div>
+                <div>
+                    <div style="font-size: 1.75rem; font-weight: 800; color: var(--success);">100%</div>
+                    <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 700;">OPEN RESOURCE RATIO</div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+            <div class="card-container">
+                <h3 style="font-size: 1.25rem; margin-bottom: 1.5rem;">Language Distribution Track Matrix</h3>
+                <div style="width: 100%; display: flex; justify-content: center; background: var(--bg-main); padding: 1.5rem; border-radius: var(--radius-md);">
+                    <canvas id="languages-chart-canvas" style="max-width: 100%;"></canvas>
+                </div>
+            </div>
+            <div class="card-container">
+                <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">System Specifications</h3>
+                [span_49](start_span)[span_50](start_span)<p style="font-size: 0.95rem; margin-bottom: 1rem;">All baseline compiler configurations are executed inside Termux container subsystems using strict optimization keys[span_49](end_span)[span_50](end_span).</p>
+                <hr style="border: none; border-top: 1px solid var(--border-color); margin-bottom: 1rem;">
+                <div style="font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.5rem;">
+                    [span_51](start_span)<div><strong>Target SDK Framework:</strong> API Level 31[span_51](end_span)</div>
+                    [span_52](start_span)[span_53](start_span)<div><strong>Native Tooling Engine:</strong> CMake & JNI Integrations[span_52](end_span)[span_53](end_span)</div>
+                    [span_54](start_span)<div><strong>Data Cache Boundary:</strong> 15m Local Network Safeguard[span_54](end_span)</div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Nirbhay Kumar. All projects are open-source and available on GitHub.</p>
-                <div class="footer-links">
-                    <a href="https://github.com/Nirbhay-Kumar-Developer" target="_blank">GitHub</a>
-                    <a href="index.html">Home</a>
-                    <a href="dashboard.html">Dashboard</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script type="module" src="assets/js/app.js" defer></script>
 </body>
 </html>
